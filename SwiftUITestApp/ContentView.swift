@@ -11,7 +11,7 @@ import SwiftData
 struct ContentView: View {
 
     var body: some View {
-        Circle()
+        LinearGradient(colors: [.red, .green], startPoint: .top, endPoint: .bottom)
     }
 
 }
