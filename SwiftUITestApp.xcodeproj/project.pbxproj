@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65F492902C108B8F00F4BCE2 /* SwiftUITestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4928F2C108B8F00F4BCE2 /* SwiftUITestAppApp.swift */; };
-		65F492922C108B8F00F4BCE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F492912C108B8F00F4BCE2 /* ContentView.swift */; };
-		65F492942C108B8F00F4BCE2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F492932C108B8F00F4BCE2 /* Item.swift */; };
+		654B99272C21865A002FB116 /* RandomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99262C21865A002FB116 /* RandomizerView.swift */; };
+		65F492902C108B8F00F4BCE2 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4928F2C108B8F00F4BCE2 /* MyApp.swift */; };
+		65F492922C108B8F00F4BCE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F492912C108B8F00F4BCE2 /* HomeView.swift */; };
 		65F492962C108B9100F4BCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F492952C108B9100F4BCE2 /* Assets.xcassets */; };
 		65F492992C108B9100F4BCE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F492982C108B9100F4BCE2 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		654B99262C21865A002FB116 /* RandomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerView.swift; sourceTree = "<group>"; };
 		65F4928C2C108B8F00F4BCE2 /* SwiftUITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		65F4928F2C108B8F00F4BCE2 /* SwiftUITestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITestAppApp.swift; sourceTree = "<group>"; };
-		65F492912C108B8F00F4BCE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		65F492932C108B8F00F4BCE2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		65F4928F2C108B8F00F4BCE2 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
+		65F492912C108B8F00F4BCE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		65F492952C108B9100F4BCE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F492982C108B9100F4BCE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,6 +34,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		654B99282C2199B4002FB116 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				654B99292C219A13002FB116 /* Home */,
+				654B992A2C219A1A002FB116 /* Randomizer */,
+				654B992B2C219A2A002FB116 /* ProfileList */,
+				654B992C2C219A46002FB116 /* Common */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		654B99292C219A13002FB116 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				65F492912C108B8F00F4BCE2 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		654B992A2C219A1A002FB116 /* Randomizer */ = {
+			isa = PBXGroup;
+			children = (
+				654B99262C21865A002FB116 /* RandomizerView.swift */,
+			);
+			path = Randomizer;
+			sourceTree = "<group>";
+		};
+		654B992B2C219A2A002FB116 /* ProfileList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileList;
+			sourceTree = "<group>";
+		};
+		654B992C2C219A46002FB116 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		654B992D2C219AC1002FB116 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				65F4928F2C108B8F00F4BCE2 /* MyApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		654B992E2C219AEB002FB116 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		654B992F2C219B20002FB116 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		654B99312C219B58002FB116 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		654B99322C219B7D002FB116 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				65F492952C108B9100F4BCE2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		65F492832C108B8F00F4BCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +131,12 @@
 		65F4928E2C108B8F00F4BCE2 /* SwiftUITestApp */ = {
 			isa = PBXGroup;
 			children = (
-				65F4928F2C108B8F00F4BCE2 /* SwiftUITestAppApp.swift */,
-				65F492912C108B8F00F4BCE2 /* ContentView.swift */,
-				65F492932C108B8F00F4BCE2 /* Item.swift */,
-				65F492952C108B9100F4BCE2 /* Assets.xcassets */,
+				654B992D2C219AC1002FB116 /* App */,
+				654B99282C2199B4002FB116 /* Views */,
+				654B992E2C219AEB002FB116 /* ViewModels */,
+				654B992F2C219B20002FB116 /* Services */,
+				654B99312C219B58002FB116 /* Utilities */,
+				654B99322C219B7D002FB116 /* Resources */,
 				65F492972C108B9100F4BCE2 /* Preview Content */,
 			);
 			path = SwiftUITestApp;
@@ -140,9 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65F492922C108B8F00F4BCE2 /* ContentView.swift in Sources */,
-				65F492942C108B8F00F4BCE2 /* Item.swift in Sources */,
-				65F492902C108B8F00F4BCE2 /* SwiftUITestAppApp.swift in Sources */,
+				654B99272C21865A002FB116 /* RandomizerView.swift in Sources */,
+				65F492922C108B8F00F4BCE2 /* HomeView.swift in Sources */,
+				65F492902C108B8F00F4BCE2 /* MyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
