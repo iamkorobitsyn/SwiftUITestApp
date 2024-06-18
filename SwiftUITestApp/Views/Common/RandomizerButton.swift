@@ -15,19 +15,23 @@ struct RandomizerButton: View {
     
     var body: some View {
         ZStack {
-            Text("SHOW")
-                .foregroundStyle(Color(UIColor.darkGray))
-                .font(.system(size: 20, weight: .thin))
+            
             Button(action: {
                 action()
                 withAnimation(.bouncy(duration: 0.5)) { degress -= 360 }
             }) {
-                Circle()
-                    .trim(from: 0.1, to: 0.9)
-                    .stroke(style: StrokeStyle(lineWidth: 1, lineCap: .round))
-                    .frame(width: 150)
-                    .rotationEffect(.degrees(-degress))
-                    .foregroundStyle(.orange)
+                ZStack {
+                    Text("SHOW")
+                        .foregroundStyle(Color(UIColor.darkGray))
+                        .font(.system(size: 20, weight: .thin))
+                    
+                    Circle()
+                        .trim(from: 0.1, to: 0.9)
+                        .stroke(style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
+                        .frame(width: 150)
+                        .rotationEffect(.degrees(-degress))
+                        .foregroundStyle(.orange)
+                }
             }
         }
     }

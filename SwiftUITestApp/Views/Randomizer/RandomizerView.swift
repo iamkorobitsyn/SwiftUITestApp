@@ -21,6 +21,8 @@ struct RandomizerView: View {
                     .foregroundStyle(Color(UIColor.white))
                     .padding(.top, 40)
                 
+                UserBar()
+                
                 Spacer()
                     
                 RandomizerButton(action: {})
