@@ -15,19 +15,18 @@ struct RandomizerView: View {
         ZStack {
             LinearGradient(colors: [.orange, .white], startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
+            VStack {
+                Text("RANDOM USER")
+                    .font(.system(size: 55, weight: .ultraLight))
+                    .foregroundStyle(Color(UIColor.white))
+                    .padding(.top, 40)
+                
+                Spacer()
+                    
+                RandomizerButton(action: {})
+                    .padding(.bottom, 50)
+            }
             
-            Button(action: {
-                withAnimation(.bouncy(duration: 0.3)) { // Анимация с длительностью 2 секунды
-                            rotation += 360 // Поворот на 180 градусов
-                        }
-                    }) {
-                        Circle()
-                            .trim(from: 0.1, to: 0.9) // От 0.0 до 0.75 для создания кольца
-                            .stroke(lineWidth: 2) // Ширина кольца
-                            .foregroundColor(.blue) // Цвет кольца
-                            .frame(width: 150, height: 150) // Размер кольца
-                            .rotationEffect(.degrees(rotation - 90)) // Поворот на -90 градусов для начала сверху + анимация
-                    }
         }
         
     }

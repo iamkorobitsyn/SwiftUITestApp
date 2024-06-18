@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		654B99272C21865A002FB116 /* RandomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99262C21865A002FB116 /* RandomizerView.swift */; };
+		654B99342C21CB85002FB116 /* RandomizerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99332C21CB85002FB116 /* RandomizerButton.swift */; };
 		65F492902C108B8F00F4BCE2 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4928F2C108B8F00F4BCE2 /* MyApp.swift */; };
 		65F492922C108B8F00F4BCE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F492912C108B8F00F4BCE2 /* HomeView.swift */; };
 		65F492962C108B9100F4BCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F492952C108B9100F4BCE2 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		654B99262C21865A002FB116 /* RandomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerView.swift; sourceTree = "<group>"; };
+		654B99332C21CB85002FB116 /* RandomizerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizerButton.swift; sourceTree = "<group>"; };
 		65F4928C2C108B8F00F4BCE2 /* SwiftUITestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F4928F2C108B8F00F4BCE2 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		65F492912C108B8F00F4BCE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		654B992C2C219A46002FB116 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				654B99332C21CB85002FB116 /* RandomizerButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654B99342C21CB85002FB116 /* RandomizerButton.swift in Sources */,
 				654B99272C21865A002FB116 /* RandomizerView.swift in Sources */,
 				65F492922C108B8F00F4BCE2 /* HomeView.swift in Sources */,
 				65F492902C108B8F00F4BCE2 /* MyApp.swift in Sources */,
@@ -362,8 +366,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,8 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
