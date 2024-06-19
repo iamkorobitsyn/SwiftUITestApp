@@ -7,29 +7,28 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct HomeView: View {
-    
-    @State private var selected = 0
-    
+    @State private var selectedTab = 0
+
     var body: some View {
- 
-        TabView(selection: $selected) {
+        TabView(selection: $selectedTab) {
             RandomizerView()
-                .font(.system(size: 30))
                 .tabItem {
-                    
-                    Image(selected == 0 ? "RandomizerScreenIconOrange" : "RandomizerScreenIconWhite")
-                    Text(selected == 0 ? "___" : "_")
+                        Image("RandomizerScreenIcon")
+                            .renderingMode(.template)
                 }
                 .tag(0)
-            
+
             Text("PERSON LIST")
                 .tabItem {
-                    Image(selected == 1 ? "PersonListScreenIconOrange" : "PersonListScreenIconWhite")
-                    Text(selected == 1 ? "___" : "_")
+                        Image("PersonListScreenIcon")
+                            .renderingMode(.template)
                 }
                 .tag(1)
         }
+        .accentColor(.orange)
     }
 }
 

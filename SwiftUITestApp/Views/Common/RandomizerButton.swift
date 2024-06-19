@@ -28,7 +28,7 @@ struct RandomizerButton: View {
                     Circle()
                         .trim(from: 0.1, to: 0.9)
                         .stroke(style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
-                        .frame(width: 150)
+                        .frame(width: 120)
                         .rotationEffect(.degrees(-degress))
                         .foregroundStyle(.orange)
                 }

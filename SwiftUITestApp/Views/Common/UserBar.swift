@@ -11,7 +11,7 @@ import SwiftUI
 struct UserBar: View {
     
     var body: some View {
-        VStack {
+        VStack(spacing: 4) {
             UserHeaderView()
             UserDescriptionView()
             UserTransferView()
@@ -19,48 +19,64 @@ struct UserBar: View {
     }
 }
 
+//MARK: - Views
+
 struct UserHeaderView: View {
     
     var body: some View {
-        let corners = RectangleCornerRadii(topLeading: 40,
-                                           bottomLeading: 10,
-                                           bottomTrailing: 10,
-                                           topTrailing: 40)
-        UnevenRoundedRectangle(cornerRadii: corners, style: .continuous)
-            .fill(.white)
-            .opacity(0.5)
+        UnevenRoundedRectangle()
+            .bordered(corners: [40, 10, 10, 40])
             .frame(width: 320, height: 160)
-            
-            .overlay(
-                UnevenRoundedRectangle(cornerRadii: corners)
-                    .stroke(Color(UIColor.darkGray), lineWidth: 0.3)
-            )
     }
 }
 
 struct UserDescriptionView: View {
     
     var body: some View {
-        let corners = RectangleCornerRadii(topLeading: 10,
-                                           bottomLeading: 40,
-                                           bottomTrailing: 40,
-                                           topTrailing: 10)
-        UnevenRoundedRectangle(cornerRadii: corners, style: .continuous)
-            .fill(.white)
-            .opacity(0.5)
+       UnevenRoundedRectangle()
+            .bordered(corners: [10, 40, 10, 10])
             .frame(width: 320, height: 160)
-            
-            .overlay(
-                UnevenRoundedRectangle(cornerRadii: corners)
-                    .stroke(Color(UIColor.darkGray), lineWidth: 0.3)
-            )
     }
 }
 
 struct UserTransferView: View {
     
     var body: some View {
-        Text("UserTransferView")
+        
+        UnevenRoundedRectangle()
+            .bordered(corners: [10, 20, 10, 10])
+            .frame(width: 200, height: 50)
+            .padding(.trailing, -120)
+    }
+}
+
+//MARK: - Extension
+
+extension UnevenRoundedRectangle {
+    
+    func bordered(corners: [CGFloat]) -> some View {
+        ModifiedContent(content: self, modifier: Mod(corners: corners))
+    }
+}
+
+struct Mod: ViewModifier {
+    let corners: [CGFloat]
+    func body(content: Content) -> some View {
+        UnevenRoundedRectangle(cornerRadii: 
+        RectangleCornerRadii(topLeading: corners[0],
+                             bottomLeading: corners[1],
+                             bottomTrailing: corners[2],
+                             topTrailing: corners[3]), style: .continuous)
+        .fill(.white)
+        .opacity(0.4)
+        .overlay(
+            UnevenRoundedRectangle(cornerRadii:
+            RectangleCornerRadii(topLeading: corners[0],
+                                 bottomLeading: corners[1],
+                                 bottomTrailing: corners[2],
+                                 topTrailing: corners[3]), style: .continuous)
+                            .stroke(Color(UIColor.lightGray), lineWidth: 0.3)
+        )
     }
 }
 
