@@ -24,8 +24,13 @@ struct UserBar: View {
 struct UserHeaderView: View {
     
     var body: some View {
-        UnevenRoundedRectangle()
-            .bordered(corners: [40, 10, 10, 40])
+        
+        let corners =
+        RectangleCornerRadii(topLeading: 40, bottomLeading: 10,
+                             bottomTrailing: 10, topTrailing: 40)
+        
+        UnevenRoundedRectangle(cornerRadii: corners, style: .continuous)
+            .customStyle()
             .frame(width: 320, height: 160)
     }
 }
@@ -33,8 +38,13 @@ struct UserHeaderView: View {
 struct UserDescriptionView: View {
     
     var body: some View {
-       UnevenRoundedRectangle()
-            .bordered(corners: [10, 40, 10, 10])
+        
+        let corners =
+        RectangleCornerRadii(topLeading: 10, bottomLeading: 40,
+                             bottomTrailing: 10, topTrailing: 10)
+        
+        UnevenRoundedRectangle(cornerRadii: corners, style: .continuous)
+            .customStyle()
             .frame(width: 320, height: 160)
     }
 }
@@ -43,8 +53,12 @@ struct UserTransferView: View {
     
     var body: some View {
         
-        UnevenRoundedRectangle()
-            .bordered(corners: [10, 20, 10, 10])
+        let corners =
+        RectangleCornerRadii(topLeading: 10, bottomLeading: 20,
+                             bottomTrailing: 10, topTrailing: 10)
+        
+        UnevenRoundedRectangle(cornerRadii: corners, style: .continuous)
+            .customStyle()
             .frame(width: 200, height: 50)
             .padding(.trailing, -120)
     }
@@ -52,33 +66,27 @@ struct UserTransferView: View {
 
 //MARK: - Extension
 
-extension UnevenRoundedRectangle {
+struct ShapeCustomModifier <S:Shape> : ViewModifier {
     
-    func bordered(corners: [CGFloat]) -> some View {
-        ModifiedContent(content: self, modifier: Mod(corners: corners))
+    let shape: S
+    
+    func body(content: Content) -> some View {
+        content
+            .foregroundStyle(.white)
+            .opacity(0.4)
+            .overlay(
+                shape
+                    .stroke(Color(UIColor.lightGray), lineWidth: 0.3)
+            )
     }
 }
 
-struct Mod: ViewModifier {
-    let corners: [CGFloat]
-    func body(content: Content) -> some View {
-        UnevenRoundedRectangle(cornerRadii: 
-        RectangleCornerRadii(topLeading: corners[0],
-                             bottomLeading: corners[1],
-                             bottomTrailing: corners[2],
-                             topTrailing: corners[3]), style: .continuous)
-        .fill(.white)
-        .opacity(0.4)
-        .overlay(
-            UnevenRoundedRectangle(cornerRadii:
-            RectangleCornerRadii(topLeading: corners[0],
-                                 bottomLeading: corners[1],
-                                 bottomTrailing: corners[2],
-                                 topTrailing: corners[3]), style: .continuous)
-                            .stroke(Color(UIColor.lightGray), lineWidth: 0.3)
-        )
+extension Shape {
+    func customStyle() -> some View {
+        ModifiedContent(content: self, modifier: ShapeCustomModifier(shape: self))
     }
 }
+
 
 #Preview {
     UserBar()

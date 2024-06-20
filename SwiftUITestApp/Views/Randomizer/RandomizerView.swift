@@ -21,10 +21,22 @@ struct RandomizerView: View {
             .ignoresSafeArea()
             
             VStack {
-                Text("RANDOM USER")
-                    .font(.system(size: 50, weight: .ultraLight))
-                    .foregroundStyle(Color(UIColor.white))
-                    .padding(.top, 20)
+                Spacer()
+
+                Button(action: {}) {
+                    ZStack {
+                        Circle()
+                            .customStyle()
+                            .frame(width: 50, height: 50)
+                            
+                        
+                        Image("settingsIcon")
+                            .renderingMode(.template)
+                            .foregroundStyle(Color(UIColor.darkGray))
+                    }
+                    
+                }
+                
 
                 UserBar()
                     .padding(.top, 20)
