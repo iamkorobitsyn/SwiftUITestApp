@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class Test {
+    
+    var timer: Timer?
+    
+}
