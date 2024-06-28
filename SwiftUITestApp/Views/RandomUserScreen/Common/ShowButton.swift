@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct RandomizerButton: View {
+struct ShowButton: View {
     
     let action: () -> Void
     @State private var degress: Double = 90
@@ -27,7 +27,6 @@ struct RandomizerButton: View {
                         Circle()
                             .trim(from: 0.1, to: 0.9)
                             .stroke(style: StrokeStyle(lineWidth: 1.5, lineCap: .round))
-                            .frame(width: 120)
                             .rotationEffect(.degrees(-degress))
                             .foregroundStyle(.orange)
                     }
@@ -37,5 +36,5 @@ struct RandomizerButton: View {
 }
 
 #Preview {
-    RandomizerButton(action: {})
+    ShowButton(action: {})
 }
