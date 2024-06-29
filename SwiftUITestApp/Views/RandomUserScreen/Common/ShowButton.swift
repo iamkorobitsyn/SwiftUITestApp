@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ShowButton: View {
     
+    let width: CGFloat
+    let height: CGFloat
     let action: () -> Void
+    
     @State private var degress: Double = 90
     
     var body: some View {
@@ -30,11 +33,11 @@ struct ShowButton: View {
                             .rotationEffect(.degrees(-degress))
                             .foregroundStyle(.orange)
                     }
-                }
+                }.frame(width: 140, height: 140)
         }
     }
 }
 
 #Preview {
-    ShowButton(action: {})
+    ShowButton(width: 140, height: 140, action: {})
 }

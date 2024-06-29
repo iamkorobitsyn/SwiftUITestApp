@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		65130D8C2C2EA40B00C86D76 /* UIShape+Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D8B2C2EA40B00C86D76 /* UIShape+Extansion.swift */; };
-		65130D8E2C2EA4A100C86D76 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D8D2C2EA4A100C86D76 /* SettingsButton.swift */; };
+		65130D8E2C2EA4A100C86D76 /* InteractionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D8D2C2EA4A100C86D76 /* InteractionButton.swift */; };
 		65130D902C2EA64000C86D76 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */; };
 		65130D922C2EA6D600C86D76 /* UserDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */; };
-		65130D942C2EA6FB00C86D76 /* UserTransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D932C2EA6FB00C86D76 /* UserTransferView.swift */; };
 		65130D962C2EA7B500C86D76 /* CornerRadii+Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D952C2EA7B500C86D76 /* CornerRadii+Extansion.swift */; };
 		654B99272C21865A002FB116 /* RandomUserScreenMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99262C21865A002FB116 /* RandomUserScreenMainView.swift */; };
 		654B99342C21CB85002FB116 /* ShowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99332C21CB85002FB116 /* ShowButton.swift */; };
@@ -25,10 +24,9 @@
 
 /* Begin PBXFileReference section */
 		65130D8B2C2EA40B00C86D76 /* UIShape+Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIShape+Extansion.swift"; sourceTree = "<group>"; };
-		65130D8D2C2EA4A100C86D76 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		65130D8D2C2EA4A100C86D76 /* InteractionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionButton.swift; sourceTree = "<group>"; };
 		65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDescriptionView.swift; sourceTree = "<group>"; };
-		65130D932C2EA6FB00C86D76 /* UserTransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTransferView.swift; sourceTree = "<group>"; };
 		65130D952C2EA7B500C86D76 /* CornerRadii+Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadii+Extansion.swift"; sourceTree = "<group>"; };
 		654B99262C21865A002FB116 /* RandomUserScreenMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserScreenMainView.swift; sourceTree = "<group>"; };
 		654B99332C21CB85002FB116 /* ShowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowButton.swift; sourceTree = "<group>"; };
@@ -89,10 +87,9 @@
 		654B992C2C219A46002FB116 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				65130D8D2C2EA4A100C86D76 /* SettingsButton.swift */,
 				65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */,
 				65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */,
-				65130D932C2EA6FB00C86D76 /* UserTransferView.swift */,
+				65130D8D2C2EA4A100C86D76 /* InteractionButton.swift */,
 				654B99332C21CB85002FB116 /* ShowButton.swift */,
 			);
 			path = Common;
@@ -247,9 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65130D942C2EA6FB00C86D76 /* UserTransferView.swift in Sources */,
 				654B99342C21CB85002FB116 /* ShowButton.swift in Sources */,
-				65130D8E2C2EA4A100C86D76 /* SettingsButton.swift in Sources */,
+				65130D8E2C2EA4A100C86D76 /* InteractionButton.swift in Sources */,
 				654B99382C22C9CA002FB116 /* UIColor+Extansion.swift in Sources */,
 				654B99272C21865A002FB116 /* RandomUserScreenMainView.swift in Sources */,
 				65130D902C2EA64000C86D76 /* UserHeaderView.swift in Sources */,

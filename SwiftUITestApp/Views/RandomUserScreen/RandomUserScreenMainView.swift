@@ -24,24 +24,34 @@ struct RandomUserScreenMainView: View {
                 Spacer()
 
                 VStack(spacing: 4) {
-                    SettingsButton()
-                        .frame(width: 400)
-                        .padding(.bottom, 20)
+                    
+                    InteractionButton(action: {},
+                                      iconName: "settingsIcon",
+                                      iconColor: .blue)
+                    .padding(.bottom, 25)
+                    .padding(.leading, 270)
 
-                    UserHeaderView()
-                        .frame(width: 320, height: 160)
-                    UserDescriptionView()
-                        .frame(width: 320, height: 160)
-                    UserTransferView()
-                        .frame(width: 200, height: 50)
-                        .padding(.trailing, -120)
+                    UserHeaderView(width: 320, height: 160,
+                                   imageName: "testPhoto",
+                                   nameSurename: "Flenn Peck")
+                    
+                    UserDescriptionView(width: 320, height: 160,
+                                        ageOld: "37 age old",
+                                        phoneNumber: "(402) 521-3959",
+                                        mail: "flenn.peck@example.com",
+                                        address: "4351 Pecan Acres Ln")
+                    
+                    InteractionButton(action: {},
+                                      iconName: "addIcon",
+                                      iconColor: .orange)
+                    .padding(.top, 25)
+                    .padding(.leading, 270)
+                    
                 }
-                .padding(.top, 20)
                 
                 Spacer()
                 
-                ShowButton(action: {})
-                    .frame(width: 140)
+                ShowButton(width: 140, height: 140, action: {})
                     .padding(.bottom, 40)
             }
         }
