@@ -9,12 +9,15 @@ import SwiftUI
 
 struct RandomUserScreenMainView: View {
     
-    @State private var rotation: Double = 0
+    @State private var showSettingsScreen = false
 
     let topColor = UIColor(r: 105, g: 152, b: 185)
     
     var body: some View {
+ 
         ZStack {
+            
+            
             
             LinearGradient(colors: [Color(topColor), .white],
                            startPoint: .top, endPoint: .bottom)
@@ -25,7 +28,7 @@ struct RandomUserScreenMainView: View {
 
                 VStack(spacing: 4) {
                     
-                    InteractionButton(action: {},
+                    InteractionButton(action: {showSettingsScreen.toggle()},
                                       iconName: "settingsIcon",
                                       iconColor: .blue)
                     .padding(.bottom, 25)
@@ -54,7 +57,11 @@ struct RandomUserScreenMainView: View {
                 ShowButton(width: 140, height: 140, action: {})
                     .padding(.bottom, 40)
             }
+            
         }
+        .sheet(isPresented: $showSettingsScreen, content: {
+            SettingsScreen(topColor: UIColor(r: 105, g: 152, b: 185))
+        })
     }
 }
 

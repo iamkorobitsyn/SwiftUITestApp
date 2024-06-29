@@ -12,6 +12,9 @@
 		65130D902C2EA64000C86D76 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */; };
 		65130D922C2EA6D600C86D76 /* UserDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */; };
 		65130D962C2EA7B500C86D76 /* CornerRadii+Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D952C2EA7B500C86D76 /* CornerRadii+Extansion.swift */; };
+		65130D992C30B54E00C86D76 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D982C30B54E00C86D76 /* SettingsScreen.swift */; };
+		65130D9B2C30BB3B00C86D76 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D9A2C30BB3B00C86D76 /* SettingsHeaderView.swift */; };
+		65130D9D2C30BC5B00C86D76 /* SettingsColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65130D9C2C30BC5B00C86D76 /* SettingsColorView.swift */; };
 		654B99272C21865A002FB116 /* RandomUserScreenMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99262C21865A002FB116 /* RandomUserScreenMainView.swift */; };
 		654B99342C21CB85002FB116 /* ShowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99332C21CB85002FB116 /* ShowButton.swift */; };
 		654B99382C22C9CA002FB116 /* UIColor+Extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654B99372C22C9CA002FB116 /* UIColor+Extansion.swift */; };
@@ -28,6 +31,9 @@
 		65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDescriptionView.swift; sourceTree = "<group>"; };
 		65130D952C2EA7B500C86D76 /* CornerRadii+Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadii+Extansion.swift"; sourceTree = "<group>"; };
+		65130D982C30B54E00C86D76 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		65130D9A2C30BB3B00C86D76 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		65130D9C2C30BC5B00C86D76 /* SettingsColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsColorView.swift; sourceTree = "<group>"; };
 		654B99262C21865A002FB116 /* RandomUserScreenMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserScreenMainView.swift; sourceTree = "<group>"; };
 		654B99332C21CB85002FB116 /* ShowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowButton.swift; sourceTree = "<group>"; };
 		654B99372C22C9CA002FB116 /* UIColor+Extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extansion.swift"; sourceTree = "<group>"; };
@@ -50,12 +56,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65130D972C30B50F00C86D76 /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				65130D982C30B54E00C86D76 /* SettingsScreen.swift */,
+				65130D9A2C30BB3B00C86D76 /* SettingsHeaderView.swift */,
+				65130D9C2C30BC5B00C86D76 /* SettingsColorView.swift */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
 		654B99282C2199B4002FB116 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				654B99292C219A13002FB116 /* Home */,
 				654B992A2C219A1A002FB116 /* RandomUserScreen */,
 				654B992B2C219A2A002FB116 /* UserListScreen */,
+				65130D972C30B50F00C86D76 /* SettingsScreen */,
+				654B992C2C219A46002FB116 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -72,7 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				654B99262C21865A002FB116 /* RandomUserScreenMainView.swift */,
-				654B992C2C219A46002FB116 /* Common */,
+				65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */,
+				65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */,
+				654B99332C21CB85002FB116 /* ShowButton.swift */,
 			);
 			path = RandomUserScreen;
 			sourceTree = "<group>";
@@ -87,10 +107,7 @@
 		654B992C2C219A46002FB116 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				65130D8F2C2EA64000C86D76 /* UserHeaderView.swift */,
-				65130D912C2EA6D600C86D76 /* UserDescriptionView.swift */,
 				65130D8D2C2EA4A100C86D76 /* InteractionButton.swift */,
-				654B99332C21CB85002FB116 /* ShowButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -245,9 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				654B99342C21CB85002FB116 /* ShowButton.swift in Sources */,
+				65130D9D2C30BC5B00C86D76 /* SettingsColorView.swift in Sources */,
 				65130D8E2C2EA4A100C86D76 /* InteractionButton.swift in Sources */,
+				65130D9B2C30BB3B00C86D76 /* SettingsHeaderView.swift in Sources */,
 				654B99382C22C9CA002FB116 /* UIColor+Extansion.swift in Sources */,
 				654B99272C21865A002FB116 /* RandomUserScreenMainView.swift in Sources */,
+				65130D992C30B54E00C86D76 /* SettingsScreen.swift in Sources */,
 				65130D902C2EA64000C86D76 /* UserHeaderView.swift in Sources */,
 				65AE656D2C23B05E00F34F8B /* Test.swift in Sources */,
 				65F492922C108B8F00F4BCE2 /* HomeView.swift in Sources */,

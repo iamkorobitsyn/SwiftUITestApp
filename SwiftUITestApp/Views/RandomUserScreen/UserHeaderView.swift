@@ -24,14 +24,14 @@ struct UserHeaderView: View {
         ZStack {
             UnevenRoundedRectangle(cornerRadii: corners,
                                    style: .continuous)
-                .customStyle()
+            .customStyle()
             .frame(width: width, height: height)
             
             VStack(spacing: 15) {
                 Image(imageName)
                     .resizable()
                     .frame(width: 80, height: 80)
-                .clipShape(Circle())
+                    .clipShape(Circle())
                 
                 Text(nameSurename)
                     .font(Font.system(size: 20, weight: .bold))
