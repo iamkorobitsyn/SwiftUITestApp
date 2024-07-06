@@ -10,11 +10,11 @@ import SwiftUI
 
 struct SettingsScreen: View {
     
-    let topColor: UIColor
+    let customColor: UIColor
     
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color(topColor), .white],
+            LinearGradient(colors: [Color(customColor), .white],
                            startPoint: .top, endPoint: .bottom)
             .ignoresSafeArea()
             
@@ -27,5 +27,5 @@ struct SettingsScreen: View {
 }
 
 #Preview {
-    SettingsScreen(topColor: UIColor(r: 105, g: 152, b: 185))
+    SettingsScreen(customColor: UIColor(r: 105, g: 152, b: 185))
 }

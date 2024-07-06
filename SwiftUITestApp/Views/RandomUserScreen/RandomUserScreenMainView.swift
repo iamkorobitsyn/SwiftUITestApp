@@ -60,7 +60,7 @@ struct RandomUserScreenMainView: View {
             
         }
         .sheet(isPresented: $showSettingsScreen, content: {
-            SettingsScreen(topColor: UIColor(r: 105, g: 152, b: 185))
+            SettingsScreen(customColor: UIColor(r: 105, g: 152, b: 185))
         })
     }
 }
