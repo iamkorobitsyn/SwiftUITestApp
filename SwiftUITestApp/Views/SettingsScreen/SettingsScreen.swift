@@ -22,7 +22,7 @@ struct SettingsScreen: View {
                 SettingsHeaderView(width: 320, height: 160)
                 SettingsColorView(width: 320, height: 220)
             }
-        }
+        }.ignoresSafeArea(.keyboard)
     }
 }
 

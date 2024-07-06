@@ -29,7 +29,7 @@ struct SettingsHeaderView: View {
                     .foregroundStyle(Color(UIColor.darkGray))
                     .frame(height: 50)
                     .padding(.bottom, 20)
-                TextField("Please, enter your name", text: $userName)
+                TextField("Please, enter your name", text: "\($userName)")
                     .focused($fieldFocused)
                     .foregroundStyle(Color(UIColor.darkGray))
                     .multilineTextAlignment(.center)
@@ -40,6 +40,7 @@ struct SettingsHeaderView: View {
                             
                     )
                     .padding(.bottom, 30)
+                    
                     
             }
             .toolbar {
@@ -60,6 +61,7 @@ struct SettingsHeaderView: View {
             }
             
         }
+        
 }
 
 #Preview {

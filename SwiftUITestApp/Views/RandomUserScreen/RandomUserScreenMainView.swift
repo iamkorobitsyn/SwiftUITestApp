@@ -16,9 +16,6 @@ struct RandomUserScreenMainView: View {
     var body: some View {
  
         ZStack {
-            
-            
-            
             LinearGradient(colors: [Color(topColor), .white],
                            startPoint: .top, endPoint: .bottom)
             .ignoresSafeArea()
@@ -56,9 +53,10 @@ struct RandomUserScreenMainView: View {
                 
                 ShowButton(width: 140, height: 140, action: {})
                     .padding(.bottom, 40)
-            }
-            
+                
+            }.ignoresSafeArea(.keyboard, edges: .bottom)
         }
+        
         .sheet(isPresented: $showSettingsScreen, content: {
             SettingsScreen(customColor: UIColor(r: 105, g: 152, b: 185))
         })

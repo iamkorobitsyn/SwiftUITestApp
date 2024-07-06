@@ -15,7 +15,6 @@ struct HomeView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             RandomUserScreenMainView()
-            
                 .tabItem {
                         Image("RandomizerScreenIcon")
                             .renderingMode(.template)
