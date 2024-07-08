@@ -14,6 +14,7 @@ struct SettingsHeaderView: View {
     let height: CGFloat
     
     @State private var userName: String = ""
+    @State private var displayedUserName: String = ""
     @FocusState private var fieldFocused: Bool
     
     var body: some View {
@@ -24,12 +25,12 @@ struct SettingsHeaderView: View {
                 .customStyle()
                 .frame(width: width, height: height)
             VStack() {
-                Text(userName)
+                Text("Hi \(displayedUserName)")
                     .font(Font.system(size: 20, weight: .bold))
                     .foregroundStyle(Color(UIColor.darkGray))
                     .frame(height: 50)
                     .padding(.bottom, 20)
-                TextField("Please, enter your name", text: "\($userName)")
+                TextField("Please, enter your name", text: ($userName))
                     .focused($fieldFocused)
                     .foregroundStyle(Color(UIColor.darkGray))
                     .multilineTextAlignment(.center)
@@ -48,7 +49,8 @@ struct SettingsHeaderView: View {
                             HStack {
                                 Spacer()
                                 Button("OK") {
-                                    fieldFocused = false // Закрыть клавиатуру
+                                    fieldFocused = false
+                                    displayedUserName = userName
                                 }
                             }
                             
@@ -56,8 +58,6 @@ struct SettingsHeaderView: View {
                         }
                     }
                     .padding()
-                    
-                    
             }
             
         }
