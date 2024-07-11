@@ -54,7 +54,7 @@ struct RandomUserScreenMainView: View {
                 ShowButton(width: 140, height: 140, action: {})
                     .padding(.bottom, 40)
                 
-            }.ignoresSafeArea(.keyboard, edges: .bottom)
+            }.ignoresSafeArea(.keyboard)
         }
         
         .sheet(isPresented: $showSettingsScreen, content: {
