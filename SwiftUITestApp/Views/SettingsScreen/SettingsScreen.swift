@@ -20,7 +20,11 @@ struct SettingsScreen: View {
             
             VStack(spacing: 4) {
                 SettingsHeaderView(width: 320, height: 160)
-                SettingsColorView(width: 320, height: 220)
+                SettingsColorView(width: 320,
+                                  height: 220,
+                                  redValue: customColor.ciColor.red,
+                                  greenValue: customColor.ciColor.green,
+                                  blueValue: customColor.cgColor.blue)
             }
         }.ignoresSafeArea(.keyboard)
     }
